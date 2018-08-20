@@ -1,8 +1,8 @@
 import React from 'react';
-import './../styles/Gjesterom.css';
+import './../styles/Gjesteboka.css';
 import GjesteromHeaderSection from './../containers/GjesteromHeaderSection'
 
-export default class Gjesterom extends React.Component {
+export default class Gjesteboka extends React.Component {
 	constructor(props) {
     super(props);
     this.state = {
@@ -12,7 +12,7 @@ export default class Gjesterom extends React.Component {
 
   render() {
     return (
-			<div className="GjesteromContainer">
+			<div className="GjestebokaContainer">
 				<GjesteromHeaderSection />
 			</div>
 		)
