@@ -14,6 +14,7 @@ export default class Gjesteboka extends React.Component {
     return (
 			<div className="GjestebokaContainer">
 				<GjesteromHeaderSection />
+        <p>halla</p>
 			</div>
 		)
   }
