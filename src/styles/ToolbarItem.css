@@ -9,4 +9,9 @@
 
 .ToolbarItem {
   margin: 10px;
+  cursor: pointer;
+}
+
+.ToolbarItemText:hover {
+  color: #0079ce;
 }
