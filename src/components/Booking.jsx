@@ -13,7 +13,7 @@ export default class Booking extends React.Component {
   render() {
     return (
 			<div className="BookingContainer">
-				<GjesteromHeaderSection />
+				<GjesteromHeaderSection byttSide={(nesteSide) => this.props.byttSide(nesteSide)} />
         <p>Booking</p>
 			</div>
 		)

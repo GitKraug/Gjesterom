@@ -13,7 +13,7 @@ export default class Gjesteboka extends React.Component {
   render() {
     return (
 			<div className="GjestebokaContainer">
-				<GjesteromHeaderSection />
+				<GjesteromHeaderSection byttSide={(nesteSide) => this.props.byttSide(nesteSide)} />
         <p>Gjesteboka</p>
 			</div>
 		)

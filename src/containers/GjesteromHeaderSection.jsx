@@ -7,7 +7,7 @@ export default class GjesteromHeaderSection extends React.Component {
   render() {
     return (
 			<div className="GjesteromHeaderSectionContainer">
-				<Toolbar />
+				<Toolbar byttSide={(nesteSide) => this.props.byttSide(nesteSide)} />
 				<GjesteromBanner />
 			</div>
 		)

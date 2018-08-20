@@ -9,18 +9,26 @@ export default class Gjesterom extends React.Component {
     super(props);
 
     this.state = {
-			hjem: false,
+			hjem: true,
 			gjesteboka: false,
-			booking: true
+			booking: false
     };
 	}
+
+	toggleView(view) {
+      this.setState({
+				hjem: view === 'hjem',
+				gjesteboka: view === 'gjesteboka',
+				booking: view === 'booking'
+      });
+    }
 
   render() {
     return (
 			<div className="GjesteromContainer">
-				{this.state.hjem && <Hjem />}
-				{this.state.gjesteboka && <Gjesteboka />}
-				{this.state.booking && <Booking />}
+				{this.state.hjem && <Hjem byttSide={(nesteSide) => this.toggleView(nesteSide)} />}
+				{this.state.gjesteboka && <Gjesteboka byttSide={(nesteSide) => this.toggleView(nesteSide)} />}
+				{this.state.booking && <Booking byttSide={(nesteSide) => this.toggleView(nesteSide)} />}
 			</div>
 		)
   }
