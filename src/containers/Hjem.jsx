@@ -1,8 +1,8 @@
 import React from 'react';
-import './../styles/Gjesteboka.css';
+import './../styles/Hjem.css';
 import GjesteromHeaderSection from './../containers/GjesteromHeaderSection'
 
-export default class Gjesteboka extends React.Component {
+export default class Hjem extends React.Component {
 	constructor(props) {
     super(props);
     this.state = {
@@ -12,9 +12,9 @@ export default class Gjesteboka extends React.Component {
 
   render() {
     return (
-			<div className="GjestebokaContainer">
+			<div className="HjemContainer">
 				<GjesteromHeaderSection />
-        <p>Gjesteboka</p>
+        <p>Hjem</p>
 			</div>
 		)
   }
