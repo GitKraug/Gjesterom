@@ -1,0 +1,12 @@
+.ToolbarItemText {
+  font-family: "Comic Sans MS";
+	font-size: 1.2em;
+	color: white;
+	margin: 10px;
+	text-align: center;
+  margin: 2px;
+}
+
+.ToolbarItem {
+  margin: 10px;
+}
