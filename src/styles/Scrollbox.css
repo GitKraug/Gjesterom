@@ -1,0 +1,12 @@
+.ScrollboxContainer {
+  width:35%;
+  max-height: 300px;
+  margin: 20px auto;
+  overflow:auto;
+  background-color: #DFDFDF;
+  color:white;
+  scrollbar-base-color:gold;
+  font-family:comedy-sans;
+  padding:10px;
+  border-radius: 10px;
+}
