@@ -1,7 +1,7 @@
 .ScrollboxContainer {
   width:35%;
   max-height: 300px;
-  margin: 100px auto;
+  margin: 50px 0px 0px 0px auto;
   overflow:auto;
   background-color: #DFDFDF;
   color:white;

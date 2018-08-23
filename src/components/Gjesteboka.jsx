@@ -2,6 +2,7 @@ import React from 'react';
 import './../styles/Gjesteboka.css';
 import GjesteromHeaderSection from './../containers/GjesteromHeaderSection';
 import Scrollbox from './../containers/Scrollbox';
+import SkrivInnlegg from './SkrivInnlegg';
 
 export default class Gjesteboka extends React.Component {
 	constructor(props) {
@@ -21,8 +22,15 @@ export default class Gjesteboka extends React.Component {
   render() {
     return (
 			<div className="GjestebokaContainer">
-				<GjesteromHeaderSection byttSide={(nesteSide) => this.props.byttSide(nesteSide)} />
-        <Scrollbox innlegg={this.state.innlegg} />
+        <GjesteromHeaderSection byttSide={(nesteSide) => this.props.byttSide(nesteSide)} />
+        <p className="GjestebokaHeading">Gjesteboka</p>
+
+        <div className="GjestebokRow">
+          <Scrollbox innlegg={this.state.innlegg} />
+          <div className="SkrivInnleggColumn">
+            <SkrivInnlegg />
+          </div>
+        </div>
 			</div>
 		)
   }

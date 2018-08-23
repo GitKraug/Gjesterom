@@ -1,0 +1,24 @@
+.NameInput {
+  border-radius: 5px;
+	width: 70%;
+	min-height: 40px;
+	text-align: center;
+	outline: none;
+	border: 1.5px solid black;
+	font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.InnleggInput {
+  border-radius: 5px;
+  width: 70%;
+  min-height: 100px;
+  text-align: center;
+  outline: none;
+  border: 1.5px solid black;
+  font-size: 1.1em;
+}
+
+.SkrivInnleggContainer {
+  margin: 10px;
+}

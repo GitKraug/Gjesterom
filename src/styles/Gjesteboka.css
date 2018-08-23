@@ -1,0 +1,33 @@
+.GjestebokaHeading {
+  font-family: "Comic Sans MS";
+	font-size: 4.0em;
+	color: purple;
+	text-align: center;
+  margin-top: 10px;
+}
+
+.GjestebokaContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.GjestebokRow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.SkrivInnleggColumn {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
