@@ -6,9 +6,7 @@ export default class Scrollbox extends React.Component {
   render() {
     return (
 			<div className="ScrollboxContainer">
-        {
-          this.props.innlegg.map(gjestebokInnlegg => <Innlegg innlegg={gjestebokInnlegg} />)
-        }
+        { this.props.innlegg.map(gjestebokInnlegg => <Innlegg innlegg={gjestebokInnlegg} />) }
 			</div>
 		)
   }

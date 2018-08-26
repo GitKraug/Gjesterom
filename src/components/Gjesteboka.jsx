@@ -3,23 +3,42 @@ import './../styles/Gjesteboka.css';
 import GjesteromHeaderSection from './../containers/GjesteromHeaderSection';
 import Scrollbox from './../containers/Scrollbox';
 import SkrivInnlegg from './SkrivInnlegg';
+import axios from 'axios';
 
 export default class Gjesteboka extends React.Component {
 	constructor(props) {
     super(props);
     this.state = {
-      innlegg : [
-        {"name": "Steinar", "date": "22.JUNI 2022", "innlegg": "Fint stedawlkdjawjdawjodFint stedawlkdjawjdawjodFint stedawlkdjawjdawjodFint stedawlkdjawjdawjodFint stedawlkdjawjdawjodFint stedawlkdjawjdawjodFint stedawlkdjawjdawjodFint stedawlkdjawjdawjod"},
-        {"name": "Steinar2", "date": "20.JUNI 2022", "innlegg": "jdawjodFint stedawlkdjawjdawjodFint stedawlkdjawjdawjodFint stedawlkdjawjdawjodFint stedawlkdjawjdawjod"},
-        {"name": "Steinar", "date": "22.JUNI 2022", "innlegg": "Fint sted"},
-        {"name": "Steinar2", "date": "20.JUNI 2022", "innlegg": "Fint sted2"},
-        {"name": "Steinar", "date": "22.JUNI 2022", "innlegg": "Fint sted"},
-        {"name": "Steinar2", "date": "20.JUNI 2022", "innlegg": "Fint sted2"}
-      ]
+      innlegg : []
     };
 	}
 
+  componentDidMount() {
+    axios.get('https://gjestebok-ca87.restdb.io/rest/innlegg',
+      {
+        headers: {'x-apikey': '5b7bd6a219af4a22fafd4887'},
+        responseType: 'json',
+      }
+    ).then(response => {this.setState({ innlegg: response.data})});
+  }
+
+  onPostInnlegg() {
+    axios.post('https://gjestebok-ca87.restdb.io/rest/innlegg',
+      {
+        headers: {'x-apikey': '5b7bd6a219af4a22fafd4887'},
+        responseType: 'json',
+        body: {
+          dato: "dato",
+          navn: "Stine",
+          innlegg: "innlegg"
+        }
+      },
+
+    )//.then(response => {this.setState({ innlegg: response.data})});
+  }
+
   render() {
+    this.onPostInnlegg()
     return (
 			<div className="GjestebokaContainer">
         <GjesteromHeaderSection byttSide={(nesteSide) => this.props.byttSide(nesteSide)} />
