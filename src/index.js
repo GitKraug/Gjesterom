@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
-import Gjesterom from './components/Gjesterom';
+import Sjakk from './components/Sjakk';
 
 ReactDOM.render(
-	<Gjesterom />,
+	<Sjakk />,
 	document.getElementById('root')
 );
 
